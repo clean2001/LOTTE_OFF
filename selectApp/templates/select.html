@@ -61,11 +61,14 @@
     var r2
 
     function f1() {
-        var province = ["서울특별시", "경기도", "경상남도", "경상북도"];
+        var province = ["서울특별시", "경기도", "경상도", "충청도", "강원도", "전라도", "제주도"];
         var c1 = ["강북구", "노원구"];
         var c2 = ["남양주시", "평택시"];
-        var c3 = ["창원시 성산구", "창원시 의창구"];
-        var c4 = ["구미시", "포항시"];
+        var c3 = ["창원시 성산구", "창원시 의창구", "포항시"];
+        var c4 = ["서산시", "충주시"];
+        var c5 = ["춘천시","원주시"];
+        var c6 = ["전주시", "목포시"];
+        var c7 = ["제주시"];
 
         var selected = document.getElementById("s1");
         var option = selected.options[selected.selectedIndex].text;
@@ -94,8 +97,8 @@
                 addOption.value = i + 1;
                 city.add(addOption);
             }
-        } else if (option == "경상남도") {
-            r1 = "경상남도";
+        } else if (option == "경상도") {
+            r1 = "경상도";
 
             for (var i = 0; i < c3.length; i++) {
                 var addOption = document.createElement("option");
@@ -103,12 +106,39 @@
                 addOption.value = i + 1;
                 city.add(addOption);
             }
-        } else if (option == "경상북도") {
-            r1 = "경상북도";
+        } else if (option == "충청도") {
+            r1 = "충청도";
 
             for (var i = 0; i < c4.length; i++) {
                 var addOption = document.createElement("option");
                 addOption.text = c4[i];
+                addOption.value = i + 1;
+                city.add(addOption);
+            }
+        } else if (option == "강원도") {
+            r1 = "강원도";
+
+            for (var i = 0; i < c5.length; i++) {
+                var addOption = document.createElement("option");
+                addOption.text = c5[i];
+                addOption.value = i + 1;
+                city.add(addOption);
+            }
+        } else if (option == "전라도") {
+            r1 = "전라도";
+
+            for (var i = 0; i < c6.length; i++) {
+                var addOption = document.createElement("option");
+                addOption.text = c6[i];
+                addOption.value = i + 1;
+                city.add(addOption);
+            }
+        } else if (option == "제주도") {
+            r1 = "제주도";
+
+            for (var i = 0; i < c7.length; i++) {
+                var addOption = document.createElement("option");
+                addOption.text = c6[i];
                 addOption.value = i + 1;
                 city.add(addOption);
             }
@@ -151,7 +181,7 @@
                 break;
 
         }
-        //추가 o서울특별시 o경기도 ㅇ충청도 ㅇ강원도 o경상도 ㅇ전라도 ㅇ제주도
+        //추가 o서울특별시 o경기도 ㅇ충청도 ㅇ강원도 o경상도 ㅇ전라도 ㅇㄴㄴ제주도
             case "충청도":
                 if (r2 == "서산시") {
                     a1.href = "{% url 'regionFilter' '충청도 서산시' %}";
@@ -196,8 +226,11 @@
         <option value="" id="default">도 선택</option>
         <option value="1">서울특별시</option>
         <option value="2">경기도</option>
-        <option value="3">경상남도</option>
-        <option value="4">경상북도</option>
+        <option value="3">경상도</option>
+        <option value="4">충청도</option>
+        <option value="5">강원도</option>
+        <option value="6">전라도</option>
+        <option value="7">제주도</option>
     </select>
     &nbsp;&nbsp;&nbsp;
 
