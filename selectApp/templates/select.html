@@ -139,24 +139,52 @@
 
                 break;
 
-            case "경상남도":
+            case "경상도":
                 if (r2 == "창원시 성산구") {
-                    a1.href = "{% url 'regionFilter' '경상남도 창원시 성산구' %}";
+                    a1.href = "{% url 'regionFilter' '경상도 창원시 성산구' %}";
                 } else if (r2 == "창원시 의창구") {
-                    a1.href = "{% url 'regionFilter' '경상남도 창원시 의창구' %}";
-                }
+                    a1.href = "{% url 'regionFilter' '경상도 창원시 의창구' %}";
+                } else if (r2 == "포항시") {
+                    a1.href = "{% url 'regionFilter' '경상도 포항시' %}";
+                
 
                 break;
 
-            case "경상북도":
-                if (r2 == "포항시") {
-                    a1.href = "{% url 'regionFilter' '경상북도 포항시' %}";
-                } else if (r2 == "구미시") {
-                    a1.href = "{% url 'regionFilter' '경상북도 구미시' %}";
-                }
-
-                break;
         }
+        //추가 o서울특별시 o경기도 ㅇ충청도 ㅇ강원도 o경상도 ㅇ전라도 ㅇ제주도
+            case "충청도":
+                if (r2 == "서산시") {
+                    a1.href = "{% url 'regionFilter' '충청도 서산시' %}";
+                } else if (r2 == "청주시") {
+                    a1.href = "{% url 'regionFilter' '충청도 청주시' %}";
+                }
+
+                break;
+        
+            case "강원도":
+                if (r2 == "춘천시") {
+                    a1.href = "{% url 'regionFilter' '강원도 춘천시' %}";
+                } else if (r2 == "원주시") {
+                    a1.href = "{% url 'regionFilter' '강원도 원주시' %}";
+                }
+
+                break;
+
+            case "전라도":
+                if (r2 == "전주시") {
+                    a1.href = "{% url 'regionFilter' '전라도 전주시' %}";
+                } else if (r2 == "목포시") {
+                    a1.href = "{% url 'regionFilter' '강원도 목포시' %}";
+                }
+
+                break;
+
+            case "제주도":
+                if (r2 == "제주시") {
+                    a1.href = "{% url 'regionFilter' '제주도 제주시' %}";
+                }
+
+                break;
     }
 </script>
 
